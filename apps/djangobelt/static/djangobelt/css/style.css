@@ -1,0 +1,123 @@
+* {
+  margin              : 0;
+  padding             : 0;
+}
+body {
+  background-image    : url('../images/bg.jpg'); 
+  background-size     : 1920px 1080px;
+  background-repeat   : repeat;
+  font-family         : Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+#container {
+  width               : 880px;
+  height              : 600px;
+  margin              : 40px auto;
+  font-size           : 20px;
+}
+h2 {
+  padding-bottom      : 10px;
+  color               : white;
+  text-shadow         : 1px 1px 1px black;
+}
+.box {
+  width               : 390px;
+  background-color    : rgba(255,255,255,.3);
+  border              : 1px solid black;
+  float               : left;
+  padding             : 5px 8px;
+  border              : 1px solid black;
+  border-radius       : 6px;
+  box-shadow          : 2px 2px 2px black;
+}
+  .box  p{
+    margin              : 12px 0 -4px 113px;
+    color               : red;
+    font-size           : 14px; 
+    text-shadow         : 1px 1px 1px black;
+  }
+#login {
+  margin-right        : 40px;
+}
+.errors {
+  width               : 372px;
+  padding             : 6px;
+  margin              : 20px 0 8px 0;
+  background-color    : white;
+  border              : 1px solid white;
+  border-radius       : 6px;
+  box-shadow          : 2px 2px 2px black;
+  clear               : both;
+}
+label {
+  display             : inline-block;
+  width               : 105px;
+  text-align          : right;
+  padding-right       : 7px;
+  vertical-align      : middle;
+  font-size           : 20px;
+  color               : white;
+  text-shadow         : 1px 1px 1px black;
+}
+.input {
+  width               : 260px;
+  height              : 38px;
+  margin-top          : 5px;;
+  padding             : 0 5px;
+  font-size           : 18px;
+  font-weight         : bold;
+  border              : 1px solid black;
+  border-radius       : 2px;
+  color               : white;
+  background-color    : rgba(255,255,255,.3);
+  
+}
+input[name="birthday"] {
+  height              : 33px;
+  margin              : 4px 0 0 0;
+  padding             : 3px 3px;
+}
+li {
+  color               : red;
+  font-size           : 15px;
+  list-style-type     : square;
+  list-style-position : outside;
+  margin-left         : 20px;
+  text-indent         : -4px;
+  padding-bottom      : 5px;
+}
+.submit {
+  padding             : 10px 16px;
+  float               : right;
+  margin              : 10px 8px 8px 0;
+  font-size           : 14px;
+  color               : white;
+  background-color    : cornflowerblue;
+  border              : none;
+  border-radius       : 3px;
+  box-shadow          : 2px 2px 2px black;
+}
+#header {
+  height                  : 35px;
+  width                   : 825px;
+  padding                 : 15px;
+  background-color        : rgba(255,255,255,.3);
+  border                  : 1px solid white;
+  border-radius           : 8px;
+  box-shadow              : 3px 3px 3px black;
+  margin                  : 15px 9px 25px 0px;
+}
+  #header .logo {
+      height                : 45px;
+      float                 : left;
+      margin-top            : -3px;
+    } 
+  #header .apptitle {
+      font-size             : 46px;
+      text-transform        : uppercase;
+      margin-top            : -7px;
+      padding-left          : 20px;
+      font-weight           : bold;
+      color                 : red;
+      float                 : right;
+      text-shadow           : 2px 2px 2px black;
+  }

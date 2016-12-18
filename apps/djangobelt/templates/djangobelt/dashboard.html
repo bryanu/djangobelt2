@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'djangobelt/css/dashboard.css' %}">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div id="container">
+   
+    <div id="header">
+      <div>
+        {% load staticfiles %}
+        <img src="{% static 'djangobelt/images/dojo_logo.png' %}" alt="logo" class="logo"/>
+        <div class="apptitle">django BlackBelt - POKE</div>
+      </div>
+      <a href="/logout">Log off</a>
+      <p>Welcome <b>{{ request.session.username }}</b></p>
+    </div>
+
+    <div id="results">
+
+      <div class="pokes"> 
+        <h3>{{mypokes_count}}{% if mypokes_count == 1 %} Person{% else %} People{% endif %} Poked You!</h3> 
+      </div>
+
+      <div class="PokedBy"> 
+        <ul>
+        {% for user in mypokes_userlist %}
+          <li><strong>{{user.alias}}</strong> has poked you {{user.total_pokes}} time{% if user.total_pokes == 1 %}{% else %}s{% endif %}!
+          </li>
+        {% endfor %} 
+        </ul>
+      </div>
+
+      <div class="userlist">
+        <h2>People You May Want to Poke!</h2>
+        <div class="Table">
+          <div class="TRow">
+            <div class="THead username normalizeheader">  Name</div>
+            <div class="THead alias normalizeheader">     Alias</div>
+            <div class="THead emailcell normalizeheader"> Email Address</div>
+            <div class="THead pokecount normalizeheader"> Poke History</div>
+            <div class="THead buttoncell normalizeheader">Action</div>
+          </div>
+          {% for user in users %}
+            <div class="TRow">
+              <div class="TCell username">{{user.name}}</div>
+              <div class="TCell alias">{{user.alias}}</div>
+              <div class="TCell emailcell">{{user.username}}</div>
+              <div class="TCell pokecount">
+                {{user.total_pokes}} {% if user.total_pokes == 1 %}Poke{% else %}Pokes{% endif %}</div>
+              <div class="TCell buttoncell">
+                <form action="poke/{{user.id}}" method="POST">
+                  {% csrf_token %}
+                  <input type="submit" value="Poke!" class="button">
+                </form>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>    
+    
+    <div id="footer">
+      <h4>
+        <center>
+          <img src="{% static 'djangobelt/images/dojo_logo.png' %}" alt="logo" class="logo"/>
+          CodingDojo - Dallas | django Blackbelt Exam -  by Bryan Utley (Dec 2016)
+        </center>
+      </h4>
+    </div>
+
+  </div>
+</body>
+</html>
