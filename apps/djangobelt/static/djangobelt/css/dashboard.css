@@ -25,7 +25,11 @@ ul {
   border-radius       : 3px;
   box-shadow          : 2px 2px 2px black;
 }
-
+.button.poker:hover {
+  background-color    : blue;
+  font-weight         : bold;
+  margin              : -2px 0 2px 0px;
+}
 
 .Table {
   display             : block;

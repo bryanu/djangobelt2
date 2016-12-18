@@ -16,7 +16,7 @@
         <div class="apptitle">django BlackBelt - POKE</div>
       </div>
       <a href="/logout">Log off</a>
-      <p>Welcome <b>{{ request.session.username }}</b></p>
+      <p>Welcome, <b>{{ request.session.username }}!</b></p>
     </div>
 
     <div id="results">
@@ -54,7 +54,7 @@
               <div class="TCell buttoncell">
                 <form action="poke/{{user.id}}" method="POST">
                   {% csrf_token %}
-                  <input type="submit" value="Poke!" class="button">
+                  <input type="submit" value="Poke!" class="button poker">
                 </form>
               </div>
             </div>
